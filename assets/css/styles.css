@@ -287,6 +287,11 @@ a {
     display: flex;
     margin-left: auto;
     margin-top: -28px;
+    cursor: pointer;
+}
+
+.img-arrow {
+    width: 40px;
 }
 
 .courses .arrow-right {
