@@ -7,6 +7,7 @@
         <title>Project 02</title>
         <link rel="stylesheet" href="./assets/css/reset.css" />
         <link rel="stylesheet" href="./assets/css/styles.css" />
+        <link rel="stylesheet" href="./assets/css/responsive.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -18,7 +19,23 @@
         <!-- Header -->
         <header class="header fixed">
             <div class="content content-row">
-                <a href="#"><img src="./assets/img/logo.svg" alt="Lesson" /></a>
+                <!-- tablet/mobile header -->
+                <label for="checkbox" class="toggle__menu">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"
+                    >
+                        <path
+                            fill="CurrentColor"
+                            d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+                        />
+                    </svg>
+                </label>
+
+                <!-- logo -->
+                <a href="#" class="header__logo"
+                    ><img src="./assets/img/logo.svg" alt="Lesson"
+                /></a>
                 <!-- navbar -->
                 <nav class="nav">
                     <ul>
@@ -43,10 +60,56 @@
                 </div>
             </div>
         </header>
+
+        <!-- Header tablet/mobile -->
+        <header class="header__mobile">
+            <input
+                type="checkbox"
+                name=""
+                id="checkbox"
+                class="menu__check"
+                hidden
+            />
+            <!-- menu overlay -->
+            <label for="checkbox" class="menu__overlay"></label>
+
+            <!-- menu drawer -->
+            <div class="menu__drawer">
+                <!-- Logo -->
+                <a href="#">
+                    <img
+                        src="./assets/img/logo.svg"
+                        alt="Besnik"
+                        class="menu__drawer--logo"
+                /></a>
+
+                <!-- navbar -->
+                <nav class="nav">
+                    <ul>
+                        <li>
+                            <a href="#" class="home">Home</a>
+                        </li>
+                        <li>
+                            <a href="#courses">Courses</a>
+                        </li>
+                        <li>
+                            <a href="#pricing">Pricing</a>
+                        </li>
+                        <li>
+                            <a href="#review">Reviews</a>
+                        </li>
+                        <div class="header__line show-on-mobile"></div>
+                        <li>
+                            <a href="" class="show-on-mobile">Sign Up</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
         <main>
             <!-- Hero -->
             <div class="hero">
-                <div class="content">
+                <div class="hero__row content">
                     <div class="img-block">
                         <img
                             src="./assets/img/hero-img.jpg"
@@ -146,7 +209,7 @@
                                 Build new skills with new trendy courses and
                                 shine for the next future career.
                             </p>
-                            <div class="courses-arrow">
+                            <div class="courses-arrow hide-on-mobile">
                                 <div class="courses-arrow arrow-left">
                                     <img
                                         src="./assets/img/courses-icon1.svg"
@@ -297,6 +360,23 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="courses-arrow show-on-mobile">
+                            <div class="courses-arrow arrow-left">
+                                <img
+                                    src="./assets/img/courses-icon1.svg"
+                                    alt=""
+                                    class="img-arrow"
+                                />
+                            </div>
+                            <div class="courses-arrow arrow-right">
+                                <img
+                                    src="./assets/img/courses-icon2.svg"
+                                    alt=""
+                                    class="img-arrow"
+                                />
                             </div>
                         </div>
                     </div>
